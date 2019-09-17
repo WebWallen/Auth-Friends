@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { axiosWithAuth } from '../utils/axiosWithAuth';
+import FriendForm from './FriendForm';
 
 const Friends = (props) => {
     const [friends, setFriends] = useState([]);
@@ -29,9 +30,7 @@ const Friends = (props) => {
     return (
         <div>
             <h1>Add a New Friend</h1>
-            <form>
-
-            </form>
+            <FriendForm addFriend={addFriend}/>
 
             <h2>Friends</h2>
             {friends.map(friend => 
