@@ -1,21 +1,22 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, NavLink } from 'react-router-dom';
 import './App.css';
+import './index.css';
 import Login from "./components/Login";
 import PrivateRoute from './components/PrivateRoute';
 import Friends from './components/Friends';
 
 function App() {
+
   return (
     <Router>
       <div className="App">
-        Let's do It.
         <ul>
           <li>
-            <Link to="/login">Login</Link>
+            <NavLink to="/login">Login</NavLink>
           </li>
           <li>
-            Friends
+            <NavLink to="/protected">Friends</NavLink>
           </li>
         </ul>
         <Switch>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { axiosWithAuth } from '../utils/axiosWithAuth';
+import '../index.css';
 
 class Login extends React.Component {
     state = {
@@ -36,6 +37,7 @@ class Login extends React.Component {
                     <input
                         type="text"
                         name="username"
+                        className="input"
                         placeholder="Username"
                         onChange={this.handleChange}
                         value={this.state.credentials.username}
@@ -43,11 +45,12 @@ class Login extends React.Component {
                     <input 
                         type="password"
                         name="password"
+                        className="input"
                         placeholder="Password"
                         onChange={this.handleChange}
                         value={this.state.credentials.password}
                     />
-                    <button>Log In</button>
+                    <button className="input button">Log In</button>
                 </form>
             </div>
         );

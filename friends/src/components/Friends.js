@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { axiosWithAuth } from '../utils/axiosWithAuth';
 import FriendForm from './FriendForm';
+import '../index.css';
 
 const Friends = (props) => {
     const [friends, setFriends] = useState([]);
@@ -31,8 +32,8 @@ const Friends = (props) => {
         <div>
             <h1>Add a New Friend</h1>
             <FriendForm addFriend={addFriend}/>
-
             <h2>Friends</h2>
+            <div className="friends-grid">
             {friends.map(friend => 
                 <div className="friend-card" key={friend.id}>
                     <h3>{friend.name}</h3>
@@ -40,7 +41,7 @@ const Friends = (props) => {
                     <h5>Age: {friend.age}</h5>
                 </div>
             )}
-
+            </div>
         </div>
     )
 }

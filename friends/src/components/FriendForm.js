@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../index.css';
 
 const FriendForm = ({ addFriend }) => {
     const [friend, setFriend] = useState({name: "", email: "", age: ""});
@@ -20,6 +21,7 @@ const FriendForm = ({ addFriend }) => {
             <input 
                 type="text"
                 name="name"
+                className="input"
                 placeholder="Name"
                 value={friend.name}
                 onChange={handleChange}
@@ -27,6 +29,7 @@ const FriendForm = ({ addFriend }) => {
             <input 
                 type="text"
                 name="email"
+                className="input"
                 placeholder="Email"
                 value={friend.email}
                 onChange={handleChange}
@@ -34,11 +37,12 @@ const FriendForm = ({ addFriend }) => {
             <input
                 type="text"
                 name="age"
+                className="input"
                 placeholder="Age"
                 value={friend.age}
                 onChange={handleChange}
             />
-            <button>Add Friend</button>
+            <button className="input button">Add Friend</button>
         </form>
     )
 

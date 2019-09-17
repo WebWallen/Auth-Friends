@@ -11,3 +11,49 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  background: pink;
+  margin: 0 auto;
+}
+
+.input {
+  display: block;
+  margin: 20px auto;
+  width: 50vw;
+  text-align: center;
+}
+
+.button {
+  background: pink;
+  color: white;
+  transition: 0.6s;
+}
+
+.button:hover {
+  background: turquoise;
+}
+
+.friends-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.friend-card {
+  background: turquoise;
+  margin: 20px auto;
+  width: 30vw;
+}
+
+.friend-card h3 {
+  background: pink;
+  margin-top: 0;
+}
