@@ -1,7 +1,8 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, PrivateRoute, Switch, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import './App.css';
 import Login from "./components/Login";
+import PrivateRoute from './components/PrivateRoute';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
           </li>
         </ul>
         <Switch>
-          {/* <PrivateRoute></PrivateRoute>  */}
+          <PrivateRoute exact path="/protected" />
           <Route path="/login" component={Login} />
         </Switch>
       </div>
